@@ -28,7 +28,7 @@ plot_df <- function(df_or_mat, x_axis_var = "", main_title = "", y_label = "", x
   x_axis_ts <- df_or_mat[, x_axis_var]
 
   # time series to plot
-  ts_to_plot <- df_or_mat[, !colnames(df) %in% x_axis_var, drop = FALSE]
+  ts_to_plot <- df_or_mat[, !colnames(df_or_mat) %in% x_axis_var, drop = FALSE]
 
   # find out the max and min for the limits of the y-axis
   max_y <- max(ts_to_plot)
